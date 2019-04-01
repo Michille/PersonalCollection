@@ -1,70 +1,3 @@
-<<<<<<< HEAD
-<?php
-require('db.php');
-include("authentication.php");
-$status = "";
-if(isset($_POST['new']) && $_POST['new']==1){
-	$code_no =$_REQUEST['code_no'];
-    $product_id =$_REQUEST['product_id'];
-    $quantity = $_REQUEST['quantity'];
-	$unit = $_REQUEST['unit'];
-	$amount = $_REQUEST['amount'];
-    $ins_query="insert into collection_items(code_no,product_id,quantity,unit,amount) values
-    ('$code_no','$product_id','$quantity','$unit','$amount')";
-    mysqli_query($con,$ins_query);
-    $status = "New ITEMS added Successfully.
-    </br></br><a href='viewitems.php'>View Items</a>";
-}
-?>
-<!DOCTYPE html>
-<html>
-<head>
-	<meta charset="utf-8">
-	<title>Add New ITEMS</title>
-	<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css"> 
-	<link rel="stylesheet" href="style.css" />
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-</head>
-	<body>
-			<div class="sidebar">
-			   <a class="mt-5" href="index.php"><i class="fa fa-fw fa-home"></i> Home</a>
-				<a href="viewitems.php"><i class="fa fa-address-card-o"></i>Items </a>
-				<a href="viewprod.php"><i class="fa fa-address-card-o"></i>Product </a>
-				<a href="viewcusphp"><i class="fa fa-address-card-o"></i>Customers </a>
-				<a href="viewcollection.php"><i class="fa fa-address-card-o"></i>Collection </a>
-			   <a href="logout.php"><i class="fa fa-sign-out"></i> Logout</a>
-			</div>
-	<div class="main">
-	<br/><div class="form">
-	<div>
-	<center><h2><font face="Britannic Bold">Add New Items</font></h2></center>
-			<form name="form" method="post" action=""> 
-				<input type="hidden" name="new" value="1" />
-				<p><input type="text" class="form-control" name="code_no" placeholder="Enter code_no" required /></p>
-				<p><input type="text" class="form-control" name="product_id" placeholder="Enter product_id" required /></p>
-				<p><input type="number" class="form-control" name="quantity" placeholder="Enter quantity" required /></p>
-			<center><label>Unit</label></center>
-				<select name="unit" class="form-control" value="">
-				<option value="" selected></option>
-				<option value="Dozen">Dozen</option>
-				<option value="pack">pack</option>
-				<option value="kl">kl</option>
-				<option value="Grams">Grams</option>
-				<option value="liters">liters</option>
-				<option value="liters">set</option>
-				<option value="liters">pack</option>
-				<option value="liters">pcs.</option>
-				</select><br>
-				<p><input type="text" class="form-control" name="amount" placeholder="Enter amount" required /></p>
-				<p><input name="submit" type="submit"class="form-control"  value="Submit" /></p>
-			</form>
-	<p style="color:#FF0000;"><?php echo $status; ?></p>
-	</div>
-	</div>
-	</div>
-</body>
-</html>
-=======
 <?php
 	require('db.php');
 	include("authentication.php");
@@ -123,18 +56,15 @@ if(isset($_POST['new']) && $_POST['new']==1){
               <a class="nav-link " href="addcollection.php" >
                Collection
               </a>
-            </li>
-			<li class="nav-item ">
+            </li><li class="nav-item ">
               <a class="nav-link " href="additems.php" >
                Items
               </a>
-            </li>
-			<li class="nav-item ">
+			  </li><li class="nav-item ">
               <a class="nav-link " href="checkbox.php" >
                Checkbox
               </a>
-            </li>
-			<li class="nav-item ">
+            </li><li class="nav-item ">
               <a class="nav-link " href="logout.php" >
                Logout
               </a>
@@ -144,9 +74,12 @@ if(isset($_POST['new']) && $_POST['new']==1){
         </div>
 		</button>
     </nav>
-	<br/><br/><br/><br/><br/><br/>
-	<a href="viewitems.php" class="btn btn-info" role="button">View Items List</a>
-    <center><h2><font face="Britannic Bold">Add Items</font></h2>
+	<br/><br/><br/><br/><br/><br/><br/><br/>
+	<a href="viewcollection.php" class="btn btn-info" role="button">View Collection</a>
+    <script src="jquery/jquery.min.js"></script>
+    <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+	
+		<center><h2><font face="Britannic Bold">Add Items</font></h2>
 		<div style="width:900px;">
 				
 		<form action="checkbox.php" method="post">
@@ -193,11 +126,15 @@ if(isset($_POST['new']) && $_POST['new']==1){
 			</select>
 				
 		
-		<div style="width:900px;">
-		<table width="100%" border="1" style="border-collapse:collapse;" class="table table-striped table-dark">
+		<div class="main">
+	<center><div class="main w-75">
+	<div class="form">
+	<div class="row" >	
+		<br><br><br>
+		<div class="column" style="; margin-left:85px;">
+			<table width="100%" border="10" align="left" style="; background-color:white;">
 		<thead>
-		<tr class="bg-yellow">
-			
+		<tr>
 			<th><strong>Product_ID</strong></th>
 			<th><strong>Unit</strong></th>
 			<th><strong>Quantity</strong></th>
@@ -229,14 +166,10 @@ if(isset($_POST['new']) && $_POST['new']==1){
 				</br></br><a href='viewcollection.php'>View Sales</a>";
             } 
 			?>
-			
-			
-			
 		</tbody>
 		</table>
-		<br/>
-		<p><input name="submit" type="submit" id="submit" value="Submit" /></p>
-		<a href="viewcollection.php"class="btn btn-primary">View Sales</a>
+		<br/><br/><br/><br/><br/>
+		<p><input name="submit" type="submit" class="form-control" id="submit" value="Submit" /></p>
 		</div>	
 	</form>	
 </center>
@@ -286,4 +219,3 @@ $(document).ready(function() {
 	
 </body>
 </html>
->>>>>>> New update

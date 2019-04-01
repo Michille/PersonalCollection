@@ -3,8 +3,6 @@
 
   <head>
 
-
-
     <title>Personal Collection</title>
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
@@ -31,15 +29,14 @@
               </a>
             </li>
 			<li class="nav-item ">
-              <a class="nav-link " href="addcus.php" >
+              <a class="nav-link " href="addcustomer.php" >
                Customer /
               </a>
             </li>
 			<li class="nav-item ">
-              <a class="nav-link " href="addprod.php" >
-               Product /
+              <a class="nav-link " href="addproducts.php" >
+              Product /
               </a>
-            </li>
 			<li class="nav-item ">
               <a class="nav-link " href="addcollection.php" >
                Collection /

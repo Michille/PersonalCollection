@@ -1,7 +1,7 @@
 <?php
 require('db.php');
 $id=$_REQUEST['id'];
-$query = "DELETE FROM customer_table WHERE customer_id=$id"; 
+$query = "DELETE FROM product_table WHERE Product_ID=$id"; 
 $result = mysqli_query($con,$query) or die ( mysqli_error());
-header("Location: viewcus.php"); 
+header("Location: viewproducts.php"); 
 ?>
