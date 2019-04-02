@@ -47,6 +47,11 @@
               </a>
             </li>
             </li>
+			  </a>
+			<li class="nav-item ">
+              <a class="nav-link " href="changepass.html" >
+               Change Pass /
+              </a>
 			<li class="nav-item ">
               <a class="nav-link " href="logout.php" >
                Logout /

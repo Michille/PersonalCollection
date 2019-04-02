@@ -24,21 +24,34 @@ include("authentication.php");
            
             <li class="nav-item ">
               <a class="nav-link " href="home.php" >
+<<<<<<< HEAD
                Home 
+=======
+               Home /
+>>>>>>> Last Commit
               </a>
             </li>
 			<li class="nav-item ">
               <a class="nav-link " href="about.php" >
+<<<<<<< HEAD
                About us
+=======
+               About us /
+>>>>>>> Last Commit
               </a>
             </li>
 			<li class="nav-item ">
               <a class="nav-link " href="addcustomer.php" >
+<<<<<<< HEAD
               Customer
+=======
+              Customer /
+>>>>>>> Last Commit
               </a>
             </li>
 			<li class="nav-item ">
               <a class="nav-link " href="addproducts.php" >
+<<<<<<< HEAD
                Product
               </a>
             </li>
@@ -53,6 +66,22 @@ include("authentication.php");
             </li><li class="nav-item ">
               <a class="nav-link " href="logout.php" >
                Logout
+=======
+               Product /
+              </a>
+            </li>
+			<li class="nav-item ">
+              <a class="nav-link " href="viewcollection.php" >
+               Collection /
+              </a>
+            </li><li class="nav-item ">
+              <a class="nav-link " href="salesproduct.php" >
+               Sales /
+              </a>
+            </li><li class="nav-item ">
+              <a class="nav-link " href="logout.php" >
+               Logout /
+>>>>>>> Last Commit
               </a>
             
             </li>
@@ -65,6 +94,7 @@ include("authentication.php");
     <script src="jquery/jquery.min.js"></script>
     <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
 		<div class="main">
+<<<<<<< HEAD
 <center><div class="main w-75">
 <br/><br/><div class="form">
 <h2><font face="Britannic Bold">Product List</font></h2>
@@ -82,6 +112,26 @@ include("authentication.php");
 <th><strong>Delete</strong></th>
 </tr>
 </thead>
+=======
+<center>
+<div class="main w-75">
+<br/><br/><div class="form">
+<h2><font face="Britannic Bold">Product List</font></h2>
+</div>
+<div class="column" style="; margin-left:20px;"> 
+<table width="110%" border="10" style="; background-color:white;">
+	<thead>
+		<th><strong>Number</strong></th>
+		<th><strong>Product_ID</strong></th>
+		<th><strong>Particular</strong></th>
+		<th><strong>Unit</strong></th>
+		<th><strong>Regular_Price</strong></th>
+		<th><strong>Discount</strong></th>
+		<th><strong>Edit</strong></th>
+		<th><strong>Delete</strong></th>
+</tr>
+	</thead>
+>>>>>>> Last Commit
 </div>
 </center>
 <tbody>
@@ -90,6 +140,7 @@ $count=1;
 $sel_query="SELECT * FROM product_table";
 $result = mysqli_query($con,$sel_query);
 while($row = mysqli_fetch_assoc($result)) { ?>
+<<<<<<< HEAD
 <tr><td align="center"><?php echo $count; ?></td>
 <td align="center"><?php echo $row["Product_ID"]; ?></td>
 <td align="center"><?php echo $row["Particular"]; ?></td>
@@ -98,6 +149,17 @@ while($row = mysqli_fetch_assoc($result)) { ?>
 <td align="center"><?php echo $row["Discount"]; ?></td>
 <td align="center">
 <a href="editproducts.php?id=<?php echo $row["Product_ID"]; ?>"><i class="fa fa-edit"></i></a>
+=======
+<tr>
+	<td align="center"><?php echo $count; ?></td>
+	<td align="center"><?php echo $row["Product_ID"]; ?></td>
+	<td align="center"><?php echo $row["Particular"]; ?></td>
+	<td align="center"><?php echo $row["Unit"]; ?></td>
+	<td align="center"><?php echo $row["Regular_Price"]; ?></td>
+	<td align="center"><?php echo $row["Discount"]; ?></td>
+	<td align="center">
+	<a href="editproducts.php?id=<?php echo $row["Product_ID"]; ?>"><i class="fa fa-edit"></i></a>
+>>>>>>> Last Commit
 </td>
 <td align="center">
 <a href="deleteproducts.php?id=<?php echo $row["Product_ID"]; ?>"><i class="fa fa-trash-o"></i></a>

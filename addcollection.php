@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 <?php
 require('db.php');
 include("authentication.php");
@@ -134,6 +135,8 @@ if(isset($_POST['new']) && $_POST['new']==1){
 </body>
 </html>
 =======
+=======
+>>>>>>> Last Commit
 <?php include('processadd.php');?>
 <!DOCTYPE html>
 <html>
@@ -158,21 +161,34 @@ if(isset($_POST['new']) && $_POST['new']==1){
            
             <li class="nav-item ">
               <a class="nav-link " href="home.php" >
+<<<<<<< HEAD
                Home 
+=======
+               Home /
+>>>>>>> Last Commit
               </a>
             </li>
 			<li class="nav-item ">
               <a class="nav-link " href="aboutus.php" >
+<<<<<<< HEAD
                About us
+=======
+               About us /
+>>>>>>> Last Commit
               </a>
             </li>
 			<li class="nav-item ">
               <a class="nav-link " href="addcustomer.php" >
+<<<<<<< HEAD
               Customer
+=======
+              Customer /
+>>>>>>> Last Commit
               </a>
             </li>
 			<li class="nav-item ">
               <a class="nav-link " href="addproducts.php" >
+<<<<<<< HEAD
                Product
               </a>
             </li>
@@ -191,6 +207,23 @@ if(isset($_POST['new']) && $_POST['new']==1){
             </li><li class="nav-item ">
               <a class="nav-link " href="logout.php" >
                Logout
+=======
+               Product /
+              </a>
+            </li>
+			<li class="nav-item ">
+              <a class="nav-link " href="viewcollection.php" >
+               Collection /
+              </a>
+            
+			  </li><li class="nav-item ">
+              <a class="nav-link " href="salesproduct.php" >
+               Sales /
+              </a>
+            </li><li class="nav-item ">
+              <a class="nav-link " href="logout.php" >
+               Logout /
+>>>>>>> Last Commit
               </a>
             
             </li>
@@ -199,9 +232,16 @@ if(isset($_POST['new']) && $_POST['new']==1){
 		</button>
     </nav>
 	<br/><br/><br/><br/>
+<<<<<<< HEAD
 	<a href="viewcollection.php" class="btn btn-info" role="button">View Collection & Items List</a>
     <div class="main">
 	<br/><br/><br/><br/><div class="form">
+=======
+	<a href="itemsadd.php"class="btn btn-primary">+Add Items</a>
+    <div class="main">
+	<br/><br/><br/><br/>
+	<div class="form">
+>>>>>>> Last Commit
 	<div>
 	<form method="POST">
 	<b><a style="font-size:20px;">Customer Name:</b></a>
@@ -250,7 +290,11 @@ if(isset($_POST['new']) && $_POST['new']==1){
 		<a href="viewcollection.php"class="btn btn-info">View Sales</a>
 		<?php else: ?>
 			<button type="submit" class="btn btn-primary" name="save">Save</button>
+<<<<<<< HEAD
 			<a href="additems.php"class="btn btn-primary"> +Add Items</a>
+=======
+			
+>>>>>>> Last Commit
 		<?php endif;?>
 		</div>
 	</form>

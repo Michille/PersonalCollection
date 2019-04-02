@@ -3,10 +3,13 @@
 <head>
 <meta charset="utf-8">
 <title>Login</title>
+<<<<<<< HEAD
 <link rel="stylesheet" type="text/css" href="style.css">
+=======
+>>>>>>> Last Commit
 <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
 </head>
-<body>
+<body background="photos/pc.jpg" alt="Responsive background-image" >
 <?php
 require('db.php');
 session_start();
@@ -33,7 +36,11 @@ and password='".md5($password)."'";
 <br/><br/><br/><br/><br/><br/>
 <div class="form">
 <div class="column" style="; margin-left:65px;">
+<<<<<<< HEAD
 <center><h1><font face="Arial Rounded MT Bold" style="font-size:5vw">Log In</font></h1></center>
+=======
+<center><h1><font face="Arial Rounded MT Bold" style="font-size:5vw;color:white">Log In</font></h1></center>
+>>>>>>> Last Commit
 <center><form action="" method="post" name="login">
 <input type="text" name="username" placeholder="Username" required /><br/><br/>
 <input type="password" name="password" placeholder="Password" required /><br/><br/>

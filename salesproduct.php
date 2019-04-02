@@ -1,113 +1,3 @@
-<<<<<<< HEAD
-<?php
-require('db.php');
-include("authentication.php");
-?>
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="utf-8">
-<title>View Collection</title>
-<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css"> 
-</head>
-<body>
-		<div class="sidebar">
-		   <a class="mt-5" href="index.php"><i class="fa fa-fw fa-home"></i> Home</a>
-			<a href="addcollection.php"><i class="fa fa-address-card-o"></i>Add new Collection </a>
-			<a href="viewprod.php"><i class="fa fa-address-card-o"></i>Product </a>
-			<a href="addcus.php"><i class="fa fa-address-card-o"></i>Customers </a>
-			<a href="viewitems.php"><i class="fa fa-address-card-o"></i>Items </a>
-		   <a href="logout.php"><i class="fa fa-sign-out"></i> Logout</a>
-		</div>
-		<center><div class="main w-75">
-		<br/><br/>
-		<div class="form">
-				<h2><font face="Britannic Bold">Collection List</font></h2>
-		</div>
-	<table class="table-striped" width="100%"  style="border-collapse:collapse;">
-			<thead>
-				<th><strong>Number</strong></th>
-				<th><strong>Code_no</strong></th>
-				<th><strong>Customer_ID</strong></th>
-				<th><strong>Due_date</strong></th>
-				<th><strong>Status</strong></th>
-				<th><strong>Date_paid</strong></th>
-				<th><strong>Interest</strong></th>
-				<th><strong>Edit</strong></th>
-				<th><strong>Delete</strong></th>
-				</tr>
-			</thead>
-		</div>
-			</center>
-				<tbody>
-<?php
-$count=1;
-$sel_query="SELECT * FROM collection_table";
-$result = mysqli_query($con,$sel_query);
-while($row = mysqli_fetch_assoc($result)) { ?>
-		<tr><td align="center"><?php echo $count; ?></td>
-			<td align="center"><?php echo $row["code_no"]; ?></td>
-			<td align="center"><?php echo $row["customer_id"]; ?></td>
-			<td align="center"><?php echo $row["due_date"]; ?></td>
-			<td align="center"><?php echo $row["status"]; ?></td>
-			<td align="center"><?php echo $row["date_paid"]; ?></td>
-			<td align="center"><?php echo $row["interest"]; ?></td>
-			<td align="center">
-				<a href="editcollection.php?id=<?php echo $row["code_no"]; ?>"><i class="fa fa-edit"></i></a>
-					</td>
-				<td align="center">
-				<a href="deletecollection.php?id=<?php echo $row["code_no"]; ?>"><i class="fa fa-trash-o"></i></a>
-						</td>
-							</tr>
-<?php $count++; } ?>
-<div class="form">
-				
-		</div>
-		<table class="table-striped" width="100%"  style="border-collapse:collapse;">
-		<center><div class="main w-75">
-		<br/><br/>
-		<div class="form">
-			<br/><br/><br/>
-				<h2><font face="Britannic Bold">Items List</font></h2>
-		</div>
-			<thead>
-				<th><strong>Number</strong></th>
-				<th><strong>Code_no</strong></th>
-				<th><strong>Product_ID</strong></th>
-				<th><strong>Quantity</strong></th>
-				<th><strong>Unit</strong></th>
-				<th><strong>Amount</strong></th>
-				<th><strong>Edit</strong></th>
-				<th><strong>Delete</strong></th>
-				</tr>
-			</thead>
-				</div>
-					</center>
-						<tbody>
-<?php
-$count=1;
-$sel_query="SELECT * FROM collection_items";
-$result = mysqli_query($con,$sel_query);
-while($row = mysqli_fetch_assoc($result)) { ?>
-			<tr><td align="center"><?php echo $count; ?></td>
-				<td align="center"><?php echo $row["code_no"]; ?></td>
-				<td align="center"><?php echo $row["product_id"]; ?></td>
-				<td align="center"><?php echo $row["quantity"]; ?></td>
-				<td align="center"><?php echo $row["unit"]; ?></td>
-				<td align="center"><?php echo $row["amount"]; ?></td>
-				<td align="center">
-			<a href="edititems.php?id=<?php echo $row["code_no"]; ?>"><i class="fa fa-edit"></i></a>
-			</td>
-			<td align="center">
-			<a href="deleteitems.php?id=<?php echo $row["code_no"]; ?>"><i class="fa fa-trash-o"></i></a>
-				</td>
-					</tr>
-<?php $count++; } ?>	
-</tbody>
-</table>
-</body>
-</html>
-=======
 <?php
 require('db.php');
 include("authentication.php");
@@ -227,51 +117,37 @@ body {
            
             <li class="nav-item ">
               <a class="nav-link " href="home.php" >
-               Home 
+               Home /
               </a>
             </li>
 			<li class="nav-item ">
               <a class="nav-link " href=".about.php" >
-               About us
+               About us /
               </a>
             </li>
 			<li class="nav-item ">
               <a class="nav-link " href="addcustomer.php" >
-              Customer
+              Customer /
               </a>
             </li>
 			<li class="nav-item ">
               <a class="nav-link " href="addproducts.php" >
-               Product
+               Product /
               </a>
             </li>
 			<li class="nav-item ">
-<<<<<<< HEAD
               <a class="nav-link " href="addcollection.php" >
-=======
-              <a class="nav-link " href="viewcollection.php" >
->>>>>>> Last Commit
-               Collection
+               Collection /
               </a>
             </li>
 			<li class="nav-item ">
-<<<<<<< HEAD
-              <a class="nav-link " href="additems.php" >
-               Items
-              </a>
-			  <li class="nav-item ">
-              <a class="nav-link " href="checkbox.php" >
-               Checkbox
-              </a>
-=======
-              <a class="nav-link " href="salesproduct.php" >
-               Sales
+              <a class="nav-link " href="view.php" >
+               Sales /
               </a>
 			
->>>>>>> Last Commit
             </li><li class="nav-item ">
               <a class="nav-link " href="logout.php" >
-               Logout
+               Logout /
               </a>
             
             </li>
@@ -280,15 +156,11 @@ body {
 		</button>
     </nav>
 <br/><br/><br/><br/>
-<<<<<<< HEAD
-	<a href="additems.php" class="btn btn-info" role="button">Add Items</a>
-=======
-	<a href="addcollection.php" class="btn btn-info" role="button">Add Collection</a>
->>>>>>> Last Commit
+	
     <script src="jquery/jquery.min.js"></script>
     <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
 		<div class="form"><br/><br/>
-		<center><h2><font face="Britannic Bold">Collection List & Items List</font></h2></center>
+		<center><h2><font face="Britannic Bold">Sales</font></h2></center>
 		</div>
 		<br/><br/>
 		<div class="column" style="; margin-left:300px;"> 
@@ -301,8 +173,7 @@ body {
 					<th><strong>Status</strong></th>
 					<th><strong>Date_paid</strong></th>
 					<th><strong>Interest</strong></th>
-					<th><strong>Edit</strong></th>
-					<th><strong>Delete</strong></th>
+					
 				</tr>
 				</thead>
 				<tbody>
@@ -319,11 +190,7 @@ body {
 			<td align="center"><?php echo $row["Date_paid"]; ?></td>
 			<td align="center"><?php echo $row["Interest"]; ?></td>
 			<td align="center">
-				<a href="editcollection.php?id=<?php echo $row["Code_no"]; ?>"><i class="fa fa-edit"></i></a>
-					</td>
-				<td align="center">
-				<a href="deletecollection.php?id=<?php echo $row["Code_no"]; ?>"><i class="fa fa-trash-o"></i></a>
-						</td>
+			
 							</tr>
 		<?php $count++; } ?>
 				</tbody>
@@ -337,10 +204,8 @@ body {
 				<th><strong>Code_no</strong></th>
 				<th><strong>Product_ID</strong></th>
 				<th><strong>Quantity</strong></th>
-				<th><strong>Quantity</strong></th>
+				<th><strong>Unit</strong></th>
 				<th><strong>Amount</strong></th>
-				<th><strong>Edit</strong></th>
-				<th><strong>Delete</strong></th>
 				</tr>
 				</thead>
 				<tbody>
@@ -356,11 +221,7 @@ body {
 				<td align="center"><?php echo $row["Unit"]; ?></td>
 				<td align="center"><?php echo $row["Amount"]; ?></td>
 				<td align="center">
-			<a href="edititems.php?id=<?php echo $row["Code_no"]; ?>"><i class="fa fa-edit"></i></a>
-			</td>
-			<td align="center">
-			<a href="deleteitems.php?id=<?php echo $row["Code_no"]; ?>"><i class="fa fa-trash-o"></i></a>
-				</td>
+			
 					</tr>
 			<?php $count++; } ?>	
 				</tbody>
@@ -371,4 +232,3 @@ body {
 </table>
 </body>
 </html>
->>>>>>> New update

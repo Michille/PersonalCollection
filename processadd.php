@@ -32,7 +32,11 @@ if(isset($_POST['save'])){
 	$_SESSION['msg_type'] = "success";
 	
 	
+<<<<<<< HEAD
 	header("location:viewcollection.php");
+=======
+	header("location:itemsadd.php");
+>>>>>>> Last Commit
 }
 if(isset($_GET['delete'])){
 	$id =$_GET['delete'];
@@ -41,7 +45,11 @@ if(isset($_GET['delete'])){
 	$_SESSION['message'] = "Record has been deleted!";
 	$_SESSION['msg_type'] = "danger";
 	
+<<<<<<< HEAD
 	header("location:collection.php");
+=======
+	header("location:viewcollection.php");
+>>>>>>> Last Commit
 	
 	
 }
@@ -73,7 +81,11 @@ if(isset($_POST['update'])){
 	$_SESSION['message'] = "Record has been updated!";
 	$_SESSION['msg_type'] = "warning";
 	
+<<<<<<< HEAD
 	header('location:collection.php');
+=======
+	header('location:viewcollection.php');
+>>>>>>> Last Commit
 }
 
 

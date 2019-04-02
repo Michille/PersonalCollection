@@ -15,6 +15,7 @@ include("authentication.php");
       <div class="container-responsive">
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
+<<<<<<< HEAD
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive" >
           <ul class="navbar-nav ml-auto">
@@ -25,25 +26,50 @@ include("authentication.php");
             <li class="nav-item ">
               <a class="nav-link " href="home.php" >
                Home 
+=======
+			</button>
+				<div class="collapse navbar-collapse" id="navbarResponsive" >
+					<ul class="navbar-nav ml-auto">
+						<a class="navbar-brand" href="home.html">
+							<img src="logo.jpg" style="float:left;" width="150" height="50" alt=""></a>
+								</a>
+           
+            <li class="nav-item ">
+              <a class="nav-link " href="home.php" >
+               Home /
+>>>>>>> Last Commit
               </a>
             </li>
 			<li class="nav-item ">
               <a class="nav-link " href="about.php" >
+<<<<<<< HEAD
                About us
+=======
+               About us /
+>>>>>>> Last Commit
               </a>
             </li>
 			<li class="nav-item ">
               <a class="nav-link " href="addcustomer.php" >
+<<<<<<< HEAD
               Customer
+=======
+              Customer /
+>>>>>>> Last Commit
               </a>
             </li>
 			<li class="nav-item ">
               <a class="nav-link " href="addproducts.php" >
+<<<<<<< HEAD
                Product
+=======
+               Product /
+>>>>>>> Last Commit
               </a>
             </li>
 			<li class="nav-item ">
               <a class="nav-link " href="addcollection.php" >
+<<<<<<< HEAD
                Collection
               </a>
             </li><li class="nav-item ">
@@ -55,6 +81,18 @@ include("authentication.php");
                Logout
               </a>
             
+=======
+               Collection /
+              </a>
+            </li><li class="nav-item ">
+              <a class="nav-link " href="salesproduct.php" >
+               Sales /
+              </a>
+            </li><li class="nav-item ">
+              <a class="nav-link " href="logout.php" >
+               Logout /
+              </a>
+>>>>>>> Last Commit
             </li>
           </ul>
         </div>
@@ -68,6 +106,7 @@ include("authentication.php");
 <br/><br/><div class="form">
 <h2><font face="Britannic Bold">Customers List</font></h2>
 </div>
+<<<<<<< HEAD
 <table class="table-striped" width="100%"  style="border-collapse:collapse;">
 <thead>
 <th ><strong >Customer_Id</strong></th>
@@ -82,10 +121,28 @@ include("authentication.php");
 <th><strong>Delete</strong></th>
 </tr>
 </thead>
+=======
+<div class="column" style="; margin-left:10px;"> 
+<table width="110%" border="10" style="; background-color:white;">
+	<thead>
+		<th ><strong >Customer_Id</strong></th>
+		<th><strong>Firstname</strong></th>
+		<th><strong>Lastname</strong></th>
+		<th><strong>Middlename</strong></th>
+		<th><strong>Extendedname</strong></th>
+		<th><strong>Phonenumber</strong></th>
+		<th><strong>Street</strong></th>
+		<th><strong>City</strong></th>
+		<th><strong>Edit</strong></th>
+		<th><strong>Delete</strong></th>
+</tr>
+	</thead>
+>>>>>>> Last Commit
 </div>
 </center>
 <tbody>
 <?php
+<<<<<<< HEAD
 $count=1;
 $sel_query="SELECT * FROM customer_table;";
 $result = mysqli_query($con,$sel_query);
@@ -107,6 +164,29 @@ while($row = mysqli_fetch_assoc($result)) { ?>
 <a href="deletecustomer.php?id=<?php echo $row["Customer_ID"]; ?>"><i class="fa fa-trash-o"></i></a>
 </td>
 </tr>
+=======
+		$count=1;
+		$sel_query="SELECT * FROM customer_table;";
+		$result = mysqli_query($con,$sel_query);
+		while($row = mysqli_fetch_assoc($result)) { ?>
+		<tr>
+			<td align="center"><?php echo $row["Customer_ID"]; ?></td>
+			<td align="center"><?php echo $row["Firstname"]; ?></td>
+			<td align="center"><?php echo $row["Lastname"]; ?></td>
+			<td align="center"><?php echo $row["Middlename"]; ?></td>
+			<td align="center"><?php echo $row["Extendedname"]; ?></td>
+			<td align="center"><?php echo $row["Phonenumber"]; ?></td>
+			<td align="center"><?php echo $row["Street"]; ?></td>
+			<td align="center"><?php echo $row["City"]; ?></td>
+
+		<td align="center">
+		<a href="editcustomer.php?id=<?php echo $row["Customer_ID"]; ?>"><i class="fa fa-edit"></i></a>
+		</td>
+		<td align="center">
+<a href="deletecustomer.php?id=<?php echo $row["Customer_ID"]; ?>"><i class="fa fa-trash-o"></i></a>
+		</td>
+		</tr>
+>>>>>>> Last Commit
 <?php $count++; } ?>
 </tbody>
 </table>

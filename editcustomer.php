@@ -7,6 +7,7 @@
 	$row = mysqli_fetch_assoc($result); 
 	
 	if(isset($_POST['update_record'])){
+<<<<<<< HEAD
 		$firstname =$_POST['Firstname'];
 		$lastname =$_POST['Lastname'];
 		$middlename =$_POST['Middlename'];
@@ -24,6 +25,12 @@
 			Phonenumber='".$phonenumber."', 
 			Street='".$street."',
 			City='".$city."' 
+=======
+		$firstname =$_POST['Firstname'];$lastname =$_POST['Lastname'];$middlename =$_POST['Middlename'];$extendedname =$_POST['Extendedname'];$phonenumber =$_POST['Phonenumber'];$street =$_POST['Street'];$city =$_POST['City'];
+		$update="
+		UPDATE customer_table SET 
+			Firstname='".$firstname."', Lastname='".$lastname."', Middlename='".$middlename."',Extendedname='".$extendedname."', Phonenumber='".$phonenumber."', Street='".$street."',City='".$city."' 
+>>>>>>> Last Commit
 		where
 			Customer_ID=".$id;
 		if(mysqli_query($con, $update)){
@@ -64,26 +71,43 @@
            
             <li class="nav-item ">
               <a class="nav-link " href="home.php" >
+<<<<<<< HEAD
                Home 
+=======
+               Home /
+>>>>>>> Last Commit
               </a>
             </li>
 			<li class="nav-item ">
               <a class="nav-link " href="about.php" >
+<<<<<<< HEAD
                About us
+=======
+               About us /
+>>>>>>> Last Commit
               </a>
             </li>
 			<li class="nav-item ">
               <a class="nav-link " href="addcustomer.php" >
+<<<<<<< HEAD
               Customer
+=======
+              Customer /
+>>>>>>> Last Commit
               </a>
             </li>
 			<li class="nav-item ">
               <a class="nav-link " href="addproducts.php" >
+<<<<<<< HEAD
                Product
+=======
+               Product /
+>>>>>>> Last Commit
               </a>
             </li>
 			<li class="nav-item ">
               <a class="nav-link " href="addcollection.php" >
+<<<<<<< HEAD
                Collection
               </a>
             </li><li class="nav-item ">
@@ -95,6 +119,20 @@
                Logout
               </a>
             
+=======
+               Collection /
+              </a>
+            </li>
+			<li class="nav-item ">
+              <a class="nav-link " href="additems.php" >
+               Items /
+              </a>
+            </li>
+			<li class="nav-item ">
+              <a class="nav-link " href="logout.php" >
+               Logout /
+              </a>
+>>>>>>> Last Commit
             </li>
           </ul>
         </div>
@@ -105,6 +143,7 @@
 	<div>
 		<form name="form" method="post" action=""> 
 			<input name="id" type="hidden" value="<?php echo $row['Customer_ID'];?>" />
+<<<<<<< HEAD
 			 <label> FirstName: </label>
 			<p><input type="text" class="form-control" name="Firstname" placeholder="Enter FirstName"
 			required value="<?php echo $row['Firstname'];?>" /></p>
@@ -126,6 +165,29 @@
 			<label> City: </label>
 			<p><input type="text" class="form-control" name="City" placeholder="Enter City" 
 			required value="<?php echo $row['City'];?>" /></p>
+=======
+			<b><a style="font-size:20px;">Firstname:</b></a>
+			<p><input type="text" class="form-control" name="Firstname" placeholder="Enter FirstName"
+				required value="<?php echo $row['Firstname'];?>" /></p>
+			<b><a style="font-size:20px;">Lastname:</b></a>
+			<p><input type="text" class="form-control"name="Lastname" placeholder="Enter Lastname" 
+				required value="<?php echo $row['Lastname'];?>" /></p>
+			<b><a style="font-size:20px;">Middlename:</b></a>
+			<p><input type="text" class="form-control"name="Middlename" placeholder="Enter Middlename" 
+				required value="<?php echo $row['Middlename'];?>" /></p>
+			<b><a style="font-size:20px;">Extendedname:</b></a>
+			<p><input type="text" class="form-control" name="Extendedname" placeholder="Enter Extendedname" 
+				required value="<?php echo $row['Extendedname'];?>" /></p>
+			<b><a style="font-size:20px;">Phonenumber:</b></a>
+			<p><input type="number" class="form-control" name="Phonenumber" placeholder="Enter Phonenumber" 
+				required value="<?php echo $row['Phonenumber'];?>" /></p>
+			<b><a style="font-size:20px;">Street:</b></a>
+			<p><input type="text" class="form-control" name="Street" placeholder="Enter Street" 
+				required value="<?php echo $row['Street'];?>" /></p>
+			<b><a style="font-size:20px;">City:</b></a>
+			<p><input type="text" class="form-control" name="City" placeholder="Enter City" 
+				required value="<?php echo $row['City'];?>" /></p>
+>>>>>>> Last Commit
 			<p><input name="update_record" type="submit"  value="Update" /></p>
 		</form>
 		</center>

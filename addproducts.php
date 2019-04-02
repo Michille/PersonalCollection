@@ -30,28 +30,46 @@ if(isset($_POST['new']) && $_POST['new']==1){
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
+<<<<<<< HEAD
         <div class="collapse navbar-collapse" id="navbarResponsive" >
           <ul class="navbar-nav ml-auto">
+=======
+			<div class="collapse navbar-collapse" id="navbarResponsive" >
+			<ul class="navbar-nav ml-auto">
+>>>>>>> Last Commit
             <a class="navbar-brand" href="home.html">
 			<img src="logo.jpg" style="float:left;" width="150" height="50" alt=""></a>
            
             <li class="nav-item ">
               <a class="nav-link " href="home.php" >
+<<<<<<< HEAD
                Home 
+=======
+               Home /
+>>>>>>> Last Commit
               </a>
             </li>
 			<li class="nav-item ">
               <a class="nav-link " href="about.php" >
+<<<<<<< HEAD
                About us
+=======
+               About us /
+>>>>>>> Last Commit
               </a>
             </li>
 			<li class="nav-item ">
               <a class="nav-link " href="addcustomer.php" >
+<<<<<<< HEAD
               Customer
+=======
+              Customer /
+>>>>>>> Last Commit
               </a>
             </li>
 			<li class="nav-item ">
               <a class="nav-link " href="addproducts.php" >
+<<<<<<< HEAD
                Product
               </a>
             </li>
@@ -66,6 +84,22 @@ if(isset($_POST['new']) && $_POST['new']==1){
             </li><li class="nav-item ">
               <a class="nav-link " href="logout.php" >
                Logout
+=======
+               Product /
+              </a>
+            </li>
+			<li class="nav-item ">
+              <a class="nav-link " href="viewcollection.php" >
+               Collection /
+              </a>
+            </li><li class="nav-item ">
+              <a class="nav-link " href="salesproduct.php" >
+               Sales /
+              </a>
+            </li><li class="nav-item ">
+              <a class="nav-link " href="logout.php" >
+               Logout /
+>>>>>>> Last Commit
               </a>
             
             </li>
@@ -83,11 +117,19 @@ if(isset($_POST['new']) && $_POST['new']==1){
 	<center><h2><font face="Britannic Bold">Add New Products</font></h2>
 	<form name="form" method="post" action=""> 
 	<input type="hidden" name="new" value="1" />
+<<<<<<< HEAD
 	<label>Product ID</label>
 	<p><input type="text" class="form-control" name="Product_ID" placeholder="Enter Product_ID" required /></p>
 	<label>Particular</label>
 	<p><input type="text" class="form-control" name="Particular" placeholder="Enter Particular" required /></p>
 	<label> Unit: </label>
+=======
+	<b><a style="font-size:20px;">Product_ID:</b></a>
+	<p><input type="text" class="form-control" name="Product_ID" placeholder="Enter Product_ID" required /></p>
+	<b><a style="font-size:20px;">Particular:</b></a>
+	<p><input type="text" class="form-control" name="Particular" placeholder="Enter Particular" required /></p>
+	<b><a style="font-size:20px;">Unit:</b></a>
+>>>>>>> Last Commit
 					<select input type="text" class="form-control" name="Unit" style="width:197px;" class="form-control" placeholder="Unit" required  >
 						<option placeholder=""></option>
 						<option placeholder="">pack</option>
@@ -99,8 +141,14 @@ if(isset($_POST['new']) && $_POST['new']==1){
 						<option placeholder="">set</option>
 					</select>
 					<br/><br/>
+<<<<<<< HEAD
 	<label>Product ID</label>			
 	<p><input type="text" class="form-control" name="Regular_Price" placeholder="Enter Regular_Price" required /></p>
+=======
+	<b><a style="font-size:20px;">Regular_Price:</b></a>		
+	<p><input type="text" class="form-control" name="Regular_Price" placeholder="Enter Regular_Price" required /></p>
+	<b><a style="font-size:20px;">Discount:</b></a>
+>>>>>>> Last Commit
 	<p><input type="text" class="form-control" name="Discount" placeholder="Enter Discount" required /></p>
 	<p><input name="submit" type="submit" value="Save" /></p>
 	</form>
